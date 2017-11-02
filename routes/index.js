@@ -25,7 +25,7 @@ Scraper.prototype.scrapeAsync = function(ms) {
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+  res.sendFile('index.html', { root: 'public' });
 });
 
 router.get('/images/*', function(req, res, next) {
